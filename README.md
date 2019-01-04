@@ -1,11 +1,13 @@
 # fail2ban-to-hosts.deny
 Take output from fail2ban and create a host.deny file to IP ban hackers permanently. 
 
-As a server administrator having an publicly accessable server with ssh, sftp etc open one will withou exception experience a constant traffic of bot nets attempting to gain access to your server. A common way to circumvent this problem is to run the fail2ban service. This will ban an IP for 10 minutes if it fails to log in 5 times in a row. 
+As a server administrator having an publicly accessable server with ssh, sftp etc open one will without exception experience a constant traffic of bot-nets attempting to gain access to your server using a brute forcing attack. 
+
+A common way to circumvent this problem is to run the fail2ban service. This will ban an IP for 10 minutes if it fails to log in 5 times in a row. A good enough solution to prevent access to the server, but why allow hackers to guess the password in the first place? 
 
 After running fail2ban for a while the log file will soon reveal a long list of IP addresses bellonging to malicious actors. 
 
-Fail2banToHostDeny is a simple script to generate a host.deny file from these logs.
+Fail2banToHostDeny is a simple script to generate a host.deny file from these logs. So you can permanently ban all hackers that has attempted to log in. 
 
 ## HOW TO RUN
 
