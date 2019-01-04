@@ -10,10 +10,17 @@ Fail2banToHostDeny is a simple script to generate a host.deny file from these lo
 ## HOW TO RUN
 
 ```
-Usage: dotnet fail2hostdeny.dll -i fail2ban.log -o host.deny
+Usage: dotnet fail2hostdeny.dll -r fail2ban.log -o host.deny -i 123.123.123.123
+
+OPTIONS:
+   --read, -r                           input file  (default: "fail2ban.log")
+   --output, -o output file             output file (default: "host.deny")
+   --ignore, -i ignore IP(s)            ignore IPs  (default: 127.0.0.1, 192.168.1.1, 192.168.2.1)
+   --help, -h                           show help
+
 ```
 
-## example fail2ban.log 
+## Example fail2ban.log 
 
 #### fail2ban.log
 ```
@@ -35,7 +42,7 @@ Usage: dotnet fail2hostdeny.dll -i fail2ban.log -o host.deny
 2018-12-31 14:19:28,488 fail2ban.actions        [1164]: NOTICE  [sshd] Ban 193.201.224.232
 ```
 
-## example result 
+## Example result 
 
 #### /etc/hosts.deny
 ```
