@@ -10,7 +10,11 @@ Fail2banToHostDeny is a simple script to generate a host.deny file from these lo
 ## HOW TO RUN
 
 ```
-Usage: dotnet fail2hostdeny.dll -r fail2ban.log -o host.deny -i 123.123.123.123
+NAME:
+   fail2hostdeny - create host.deny file from fail2ban log
+
+USAGE:
+   dotnet fail2hostdeny.dll -r fail2ban.log -o host.deny -i 123.123.123.123
 
 OPTIONS:
    --read, -r                           input file  (default: "fail2ban.log")
