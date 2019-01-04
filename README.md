@@ -11,7 +11,7 @@ Fail2banToHostDeny is a simple script to generate a host.deny file from these lo
 
 ```
 NAME:
-   fail2hostdeny - create host.deny file from fail2ban log
+   fail2hostdeny - create host.deny file from fail2ban log file(s)
 
 USAGE:
    dotnet fail2hostdeny.dll -r fail2ban.log -o host.deny -i 123.123.123.123
@@ -51,8 +51,10 @@ OPTIONS:
 #### /etc/hosts.deny
 ```
 ##### To block SSH Access #####
-sshd: 192.168.1.100
-sshd: 192.168.1.0/255.255.255.0
+sshd: 188.92.77.235
+sshd: 96.27.121.211
+sshd: 198.211.118.157
+sshd: 50.226.108.234
 
 ##### To block FTP Access #####
 vsftpd: 192.168.1.100
