@@ -26,7 +26,7 @@ OPTIONS:
 
 ```
 
-## Example fail2ban.log 
+## Example fail2ban.log input file
 
 #### fail2ban.log
 ```
