@@ -7,8 +7,15 @@ After running fail2ban for a while the log file will soon reveal a long list of 
 
 Fail2banToHostDeny is a simple script to generate a host.deny file from these logs.
 
+## HOW TO RUN
 
-fail2ban.log
+```
+Usage: dotnet fail2hostdeny.dll -i fail2ban.log -o host.deny
+```
+
+## example fail2ban.log 
+
+#### fail2ban.log
 ```
 2018-12-31 09:14:43,015 fail2ban.filter         [1164]: INFO    [sshd] Found 188.92.77.235 - 2018-12-31 09:14:43
 2018-12-31 09:14:43,249 fail2ban.filter         [1164]: INFO    [sshd] Found 188.92.77.235 - 2018-12-31 09:14:43
@@ -28,7 +35,9 @@ fail2ban.log
 2018-12-31 14:19:28,488 fail2ban.actions        [1164]: NOTICE  [sshd] Ban 193.201.224.232
 ```
 
-/etc/hosts.deny
+## example result 
+
+#### /etc/hosts.deny
 ```
 ##### To block SSH Access #####
 sshd: 192.168.1.100
