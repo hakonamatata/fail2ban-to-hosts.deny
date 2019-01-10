@@ -7,7 +7,7 @@ namespace Fail2hostDeny
     {
         private const string usageText = "Usage: fail2hostDeny.exe -i fail2ban.log -o host.deny";
 
-        static int Main(String[] args)
+        static int Main(string[] args)
         {
 
             // get verbose level to determine how much to print in console

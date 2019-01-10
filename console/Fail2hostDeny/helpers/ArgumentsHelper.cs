@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Fail2hostDeny.helpers
 {
+
     public enum VerboseLevel
     {
-        Error, Info, Warnings, All
+        Minimal, Error, Info, Warnings, All
     }
 
     public class ArgumentsHelper

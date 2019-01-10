@@ -4,7 +4,7 @@ using Xunit;
 
 namespace XUnitTest
 {
-    public class UnitTestArgumentsHelper
+    public class UnitTestArgumentsHelperGetLogFile
     {
         [Fact]
         public void TestGetLogFile1()
