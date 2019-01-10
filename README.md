@@ -5,7 +5,7 @@ As a server administrator having an publicly accessable server with ssh, sftp et
 
 A common way to circumvent this problem is to run the fail2ban service. This will ban an IP for 10 minutes if it fails to log in 5 times in a row. A good enough solution to prevent access to the server (given you have a strong password), but why allow hackers to guess the password in the first place? Why not just permanently ban these hackers and not allow them to even attempt to log in ever again. That is what this project is for. 
 
-## preparation
+## Preparation
 
 The first thing you need is a log file containing log in attempts from the fail2ban service. 
 

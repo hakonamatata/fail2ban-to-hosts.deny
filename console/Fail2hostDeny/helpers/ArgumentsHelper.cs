@@ -4,12 +4,17 @@ using System.Text;
 
 namespace Fail2hostDeny.helpers
 {
-
+    /// <summary>
+    /// Enum describing the logging level / verbose level1
+    /// </summary>
     public enum VerboseLevel
     {
         Minimal, Error, Info, Warnings, All
     }
 
+    /// <summary>
+    /// Class for handling console arguments
+    /// </summary>
     public class ArgumentsHelper
     {
         // remove constructor to prevent creating a ArgumentHelper object
@@ -18,6 +23,9 @@ namespace Fail2hostDeny.helpers
 
         }
 
+        /// <summary>
+        /// Parse arguments and look for input log file
+        /// </summary>
         public static string GetInputFile(string[] args)
         {
             if (args == null)
@@ -40,24 +48,9 @@ namespace Fail2hostDeny.helpers
         /// <summary>
         /// Check command line arguments for verbose argument and set verbose level.  
         /// </summary>
-        /// <param name="args"></param>
         /// <returns>VerboseLevel enum</returns>
         public static VerboseLevel GetVerboseLevel(string[] args)
         {
-            //if (args == null)
-            //{
-            //    return "fail2ban.log";
-            //}
-
-            //for (int i = 0; i < args.Length - 1; i++)
-            //{
-            //    if (args[i] == "-r" || args[i] == "--read")
-            //    {
-            //        return args[i + 1];
-            //    }
-
-            //}
-
             return VerboseLevel.All;
         }
 
