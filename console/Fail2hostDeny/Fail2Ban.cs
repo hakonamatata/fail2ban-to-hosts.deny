@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fail2hostDeny.strategy;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,6 +15,21 @@ namespace Fail2hostDeny
         /// </summary>
         HashSet<string> IPs = new HashSet<string>();
 
+        private IParseLineStrategy _parseLineStrategy;
+
+        /// <summary>
+        /// Set default parse line strategy / behavior
+        /// </summary>
+        public Fail2Ban()
+        {
+            this._parseLineStrategy = new ParseLineStrategy();
+        }
+
+        public Fail2Ban(IParseLineStrategy pls)
+        {
+            this._parseLineStrategy = pls;
+        }
+
         /// <summary>
         /// Take a line from fail2ban.log file
         /// 
@@ -26,7 +42,8 @@ namespace Fail2hostDeny
         /// <returns>IP address</returns>
         public string ParseLine(string line)
         {
-            throw new NotImplementedException();
+            // use strategy pattern to extract away parsing logic
+            return this._parseLineStrategy.Execute(line);
         }
     }
 }
