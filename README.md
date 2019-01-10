@@ -1,9 +1,9 @@
 # fail2ban-to-hosts.deny
-Take output from fail2ban and create a host.deny file to IP ban hackers permanently. 
+Take output from fail2ban and create a host.deny file to IP ban hackers permanently from your linux box. 
 
-As a server administrator having an publicly accessable server with ssh, sftp etc open one will without exception experience a constant traffic of bot-nets attempting to gain access to your server using a brute forcing attack. 
+As a server administrator having an publicly accessable server with ssh, sftp etc open, one will without exception experience a constant traffic of bot-nets attempting to gain access to your server using a simple brute forcing attack (attempting different username and password combinations every few seconds). 
 
-A common way to circumvent this problem is to run the fail2ban service. This will ban an IP for 10 minutes if it fails to log in 5 times in a row. A good enough solution to prevent access to the server, but why allow hackers to guess the password in the first place? 
+A common way to circumvent this problem is to run the fail2ban service. This will ban an IP for 10 minutes if it fails to log in 5 times in a row. A good enough solution to prevent access to the server (given you have a strong password), but why allow hackers to guess the password in the first place? Why not just permanently ban these hackers and not allow them to even attempt to log in ever again. That is what this project is for. 
 
 After running fail2ban for a while the log file will soon reveal a long list of IP addresses bellonging to malicious actors. 
 
