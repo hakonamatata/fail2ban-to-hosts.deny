@@ -5,9 +5,16 @@ As a server administrator having an publicly accessable server with ssh, sftp et
 
 A common way to circumvent this problem is to run the fail2ban service. This will ban an IP for 10 minutes if it fails to log in 5 times in a row. A good enough solution to prevent access to the server (given you have a strong password), but why allow hackers to guess the password in the first place? Why not just permanently ban these hackers and not allow them to even attempt to log in ever again. That is what this project is for. 
 
+## preparation
+
+The first thing you need is a log file containing log in attempts from the fail2ban service. 
+
+If you do not have fail2ban running, you can install it with this simple command:
+
+```sudo apt-get install fail2ban```
+
 After running fail2ban for a while the log file will soon reveal a long list of IP addresses bellonging to malicious actors. 
 
-Fail2banToHostDeny is a simple script to generate a host.deny file from these logs. So you can permanently ban all hackers that has attempted to log in. 
 
 ## HOW TO RUN
 
