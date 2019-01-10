@@ -8,7 +8,21 @@ namespace Fail2hostDeny.helpers
     {
         public string GetInputFile(string[] args)
         {
-            return "";
+            if (args == null)
+            {
+                return "fail2ban.log";
+            }
+
+            for (int i = 0; i < args.Length - 1; i++)
+            {
+                if (args[i] == "-r")
+                {
+                    return args[i + 1];
+                }
+
+            }
+
+            return "fail2ban.log";
         }
     }
 }
