@@ -28,7 +28,7 @@ USAGE:
 OPTIONS:
    --read, -r                           input file  (default: "fail2ban.log")
    --output, -o output file             output file (default: "host.deny")
-   --verbose, -v verbose level          verbose level, 0 - minimal, 1 - info, 2 - warnings, 3 - all (default: 0)
+   --verbose, -v verbose level          verbose level, 0 - minimal, 1 - info, 2 - warnings, 3 - error, 4 - all (default: 0)
    --ignore, -i ignore IP(s)            ignore IPs  (default: 127.0.0.1, 192.168.1.1, 192.168.2.1)
    --help, -h                           show help
 
