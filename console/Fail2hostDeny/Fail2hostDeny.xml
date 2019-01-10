@@ -4,6 +4,11 @@
         <name>Fail2hostDeny</name>
     </assembly>
     <members>
+        <member name="F:Fail2hostDeny.Fail2Ban.IPs">
+            <summary>
+            list of all IP's found in log file
+            </summary>
+        </member>
         <member name="M:Fail2hostDeny.Fail2Ban.ParseLine(System.String)">
             <summary>
             Take a line from fail2ban.log file

@@ -6,7 +6,9 @@ namespace Fail2hostDeny
 {
     class Fail2Ban
     {
-        // list of all IP's found in log file
+        /// <summary>
+        /// list of all IP's found in log file
+        /// </summary>
         HashSet<string> IPs = new HashSet<string>();
 
         /// <summary>
