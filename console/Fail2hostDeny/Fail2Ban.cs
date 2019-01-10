@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Fail2hostDeny
 {
-    class Fail2Ban
+    /// <summary>
+    /// All the main logic for handling the fail2ban.log file
+    /// </summary>
+    public class Fail2Ban
     {
         /// <summary>
         /// list of all IP's found in log file

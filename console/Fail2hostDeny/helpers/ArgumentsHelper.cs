@@ -36,6 +36,11 @@ namespace Fail2hostDeny.helpers
             return "fail2ban.log";
         }
 
+        /// <summary>
+        /// Check command line arguments for verbose argument and set verbose level.  
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns>VerboseLevel enum</returns>
         public static VerboseLevel GetVerboseLevel(string[] args)
         {
             //if (args == null)
