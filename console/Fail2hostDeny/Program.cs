@@ -10,20 +10,28 @@ namespace Fail2hostDeny
         static int Main(String[] args)
         {
 
+            // get verbose level to determine how much to print in console
+            VerboseLevel verboseLevel = ArgumentsHelper.GetVerboseLevel(args);
+
             if (args.Length < 2)
             {
                 Console.WriteLine(usageText);
                 return 1;
             }
 
-            foreach (string s in args)
-            {
-                Console.WriteLine(s);
-            }
+            //foreach (string s in args)
+            //{
+            //    Console.WriteLine(s);
+            //}
 
             string inputFile = ArgumentsHelper.GetInputFile(args);
 
-            Console.WriteLine("reading ", inputFile);
+            if (verboseLevel == VerboseLevel.All)
+            {
+                Console.WriteLine("reading {0}", inputFile);
+            }
+
+
 
             return 0;
 
