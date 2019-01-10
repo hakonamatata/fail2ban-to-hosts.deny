@@ -13,6 +13,11 @@ namespace Fail2hostDeny
             // get verbose level to determine how much to print in console
             VerboseLevel verboseLevel = ArgumentsHelper.GetVerboseLevel(args);
 
+            if (verboseLevel == VerboseLevel.All)
+            {
+                Console.WriteLine("verbose level set to \"{0}\".", verboseLevel);
+            }
+
             if (args.Length < 2)
             {
                 Console.WriteLine(usageText);

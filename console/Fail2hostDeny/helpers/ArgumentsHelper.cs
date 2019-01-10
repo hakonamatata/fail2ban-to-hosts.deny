@@ -9,7 +9,7 @@ namespace Fail2hostDeny.helpers
     /// </summary>
     public enum VerboseLevel
     {
-        Minimal, Error, Info, Warnings, All
+        Minimal, Info, All
     }
 
     /// <summary>
@@ -51,7 +51,30 @@ namespace Fail2hostDeny.helpers
         /// <returns>VerboseLevel enum</returns>
         public static VerboseLevel GetVerboseLevel(string[] args)
         {
-            return VerboseLevel.All;
+            if (args == null)
+            {
+                return VerboseLevel.Minimal;
+            }
+
+            for (int i = 0; i < args.Length - 1; i++)
+            {
+                if (args[i] == "-v" || args[i] == "--verbose")
+                {
+
+                    switch (args[i + 1])
+                    {
+                        case "0": return VerboseLevel.Minimal;
+                        case "1": return VerboseLevel.Info;
+                        case "2": return VerboseLevel.All;
+
+                        default: return VerboseLevel.Minimal;
+                    }
+
+                }
+
+            }
+
+            return VerboseLevel.Minimal;
         }
 
 

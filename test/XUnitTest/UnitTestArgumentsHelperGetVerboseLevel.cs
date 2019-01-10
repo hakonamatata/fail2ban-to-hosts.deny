@@ -9,7 +9,6 @@ namespace XUnitTest
         [Fact]
         public void TestGetVerboseLevel1()
         {
-            // return default on null
             Assert.Equal(VerboseLevel.Minimal, ArgumentsHelper.GetVerboseLevel(null));
         }
 
@@ -17,9 +16,21 @@ namespace XUnitTest
         public void TestGetVerboseLevel2()
         {
             string[] input = new string[] { };
-
-            // return default on null
             Assert.Equal(VerboseLevel.Minimal, ArgumentsHelper.GetVerboseLevel(input));
+        }
+
+        [Fact]
+        public void TestGetVerboseLevel3()
+        {
+            string[] input = new string[] { "-v", "1" };
+            Assert.Equal(VerboseLevel.Info, ArgumentsHelper.GetVerboseLevel(input));
+        }
+
+        [Fact]
+        public void TestGetVerboseLevel4()
+        {
+            string[] input = new string[] { "--verbose", "2" };
+            Assert.Equal(VerboseLevel.All, ArgumentsHelper.GetVerboseLevel(input));
         }
     }
 }

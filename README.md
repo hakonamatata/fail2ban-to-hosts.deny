@@ -23,12 +23,12 @@ NAME:
    fail2hostdeny - create host.deny file from fail2ban log file(s)
 
 USAGE:
-   dotnet fail2hostdeny.dll -r fail2ban.log -o host.deny -i 123.123.123.123
+   dotnet fail2hostdeny.dll -r fail2ban.log -o host.deny -v 2 -i 123.123.123.123
 
 OPTIONS:
    --read, -r                           input file  (default: "fail2ban.log")
    --output, -o output file             output file (default: "host.deny")
-   --verbose, -v verbose level          verbose level, 0 - minimal, 1 - info, 2 - warnings, 3 - error, 4 - all (default: 0)
+   --verbose, -v verbose level          verbose level, 0 - minimal, 1 - info, 2 - all (default: 0)
    --ignore, -i ignore IP(s)            ignore IPs  (default: 127.0.0.1, 192.168.1.1, 192.168.2.1)
    --help, -h                           show help
 

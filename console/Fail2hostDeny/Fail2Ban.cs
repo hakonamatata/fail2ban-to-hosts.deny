@@ -26,9 +26,7 @@ namespace Fail2hostDeny
         /// <returns>IP address</returns>
         public string ParseLine(string line)
         {
-
             throw new NotImplementedException();
-
         }
     }
 }

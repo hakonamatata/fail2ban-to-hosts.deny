@@ -26,11 +26,25 @@
             <param name="line">line in fail2ban.log file</param>
             <returns>IP address</returns>
         </member>
+        <member name="T:Fail2hostDeny.helpers.VerboseLevel">
+            <summary>
+            Enum describing the logging level / verbose level1
+            </summary>
+        </member>
+        <member name="T:Fail2hostDeny.helpers.ArgumentsHelper">
+            <summary>
+            Class for handling console arguments
+            </summary>
+        </member>
+        <member name="M:Fail2hostDeny.helpers.ArgumentsHelper.GetInputFile(System.String[])">
+            <summary>
+            Parse arguments and look for input log file
+            </summary>
+        </member>
         <member name="M:Fail2hostDeny.helpers.ArgumentsHelper.GetVerboseLevel(System.String[])">
             <summary>
             Check command line arguments for verbose argument and set verbose level.  
             </summary>
-            <param name="args"></param>
             <returns>VerboseLevel enum</returns>
         </member>
     </members>
