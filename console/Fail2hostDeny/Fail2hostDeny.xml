@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fail2hostDeny</name>
+    </assembly>
+    <members>
+        <member name="M:Fail2hostDeny.Fail2Ban.ParseLine(System.String)">
+            <summary>
+            Take a line from fail2ban.log file
+            
+            Example: 2018-12-30 06:42:40,171 fail2ban.filter [1164]: INFO [sshd] Found 159.65.230.251 - 2018-12-30 06:42:40
+            
+            Parse the text and extract the IP, in this example return "159.65.230.251"
+            
+            </summary>
+            <param name="line">line in fail2ban.log file</param>
+            <returns>IP address</returns>
+        </member>
+    </members>
+</doc>

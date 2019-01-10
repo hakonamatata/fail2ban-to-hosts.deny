@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\git\fail2ban-to-hosts.deny\console\Fail2hostDeny\Fail2hostDeny.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>
