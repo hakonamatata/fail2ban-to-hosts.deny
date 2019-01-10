@@ -21,8 +21,9 @@ namespace Fail2hostDeny
                 Console.WriteLine(s);
             }
 
-            //ArgumentsHelper argHelper = new ArgumentsHelper();
-            //string inputFile = argHelper.GetInputFile(args);
+            string inputFile = ArgumentsHelper.GetInputFile(args);
+
+            Console.WriteLine("reading ", inputFile);
 
             return 0;
 
