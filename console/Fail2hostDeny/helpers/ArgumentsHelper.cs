@@ -15,7 +15,7 @@ namespace Fail2hostDeny.helpers
 
             for (int i = 0; i < args.Length - 1; i++)
             {
-                if (args[i] == "-r")
+                if (args[i] == "-r" || args[i] == "--read")
                 {
                     return args[i + 1];
                 }
