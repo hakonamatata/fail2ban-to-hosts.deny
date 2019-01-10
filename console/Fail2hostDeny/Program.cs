@@ -28,7 +28,7 @@ namespace Fail2hostDeny
 
             if (verboseLevel == VerboseLevel.All)
             {
-                Console.WriteLine("reading {0}", inputFile);
+                Console.WriteLine("reading log file \"{0}\".", inputFile);
             }
 
 
