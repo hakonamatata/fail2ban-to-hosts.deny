@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fail2hostDeny.helpers;
+using System;
 
 namespace Fail2hostDeny
 {
@@ -15,8 +16,18 @@ namespace Fail2hostDeny
                 return 1;
             }
 
+            foreach (string s in args)
+            {
+                Console.WriteLine(s);
+            }
+
+            //ArgumentsHelper argHelper = new ArgumentsHelper();
+            //string inputFile = argHelper.GetInputFile(args);
+
             return 0;
 
         }
+
+
     }
 }
